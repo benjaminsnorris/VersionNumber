@@ -10,6 +10,7 @@
 		709C3DF41CA5A5D90058CCE8 /* VersionNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 709C3DF31CA5A5D90058CCE8 /* VersionNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		709C3DFB1CA5A5D90058CCE8 /* VersionNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709C3DF01CA5A5D90058CCE8 /* VersionNumber.framework */; };
 		709C3E001CA5A5D90058CCE8 /* VersionNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C3DFF1CA5A5D90058CCE8 /* VersionNumberTests.swift */; };
+		709C3E0B1CA5A6C30058CCE8 /* VersionNumberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C3E0A1CA5A6C30058CCE8 /* VersionNumberService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		709C3DFA1CA5A5D90058CCE8 /* VersionNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VersionNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		709C3DFF1CA5A5D90058CCE8 /* VersionNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionNumberTests.swift; sourceTree = "<group>"; };
 		709C3E011CA5A5D90058CCE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SupportingFiles/VersionNumberTests/Info.plist; sourceTree = "<group>"; };
+		709C3E0A1CA5A6C30058CCE8 /* VersionNumberService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionNumberService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				709C3DF31CA5A5D90058CCE8 /* VersionNumber.h */,
+				709C3E0A1CA5A6C30058CCE8 /* VersionNumberService.swift */,
 				709C3DF51CA5A5D90058CCE8 /* Info.plist */,
 			);
 			path = Sources;
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709C3E0B1CA5A6C30058CCE8 /* VersionNumberService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,7 @@
 		709C3E051CA5A5D90058CCE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +325,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = design.bsn.VersionNumber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		709C3E061CA5A5D90058CCE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
