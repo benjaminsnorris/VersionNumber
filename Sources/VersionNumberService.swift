@@ -11,12 +11,12 @@ public struct VersionNumberService {
     
     // MARK: - Public properties
     
-    public var currentVersionShort: String {
+    public var versionNumber: String {
         guard let shortVersion = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String else { return "Unknown" }
         return shortVersion
     }
     
-    public var currentVersion: String {
+    public var buildNumber: String {
         guard let version = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String else { return "Unknown" }
         return version
     }
