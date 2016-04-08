@@ -23,7 +23,7 @@ public struct VersionNumberService {
     
     public var appNameWithVersion: String {
         guard let appName = NSBundle.mainBundle().infoDictionary?["CFBundleName"] as? String else { return "Unnamed App" }
-        return "\(appName) version \(currentVersion) (\(currentVersionShort))"
+        return "\(appName) version \(versionNumber) (\(buildNumber))"
     }
     
     
